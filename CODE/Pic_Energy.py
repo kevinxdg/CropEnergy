@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from cmodel import *
 
 data_file = r'Result_Energy_2023_02_16_10_52_53.xlsx'
-data_path = result_dir + data_file
+data_path = result_dir + '\\' + data_file
 
 print(data_path)
 
