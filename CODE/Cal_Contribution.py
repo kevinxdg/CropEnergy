@@ -13,11 +13,11 @@ from sklearn.decomposition import PCA
 data_input_file = r'AgriInputs2208.xlsx'
 data_output_file = r'Result_Biomass_2023_02_01_00_03_05.xlsx'
 
-data_input_path = data_dir + data_input_file
-data_output_path = result_dir + data_output_file
+data_input_path = data_dir + '\\' + data_input_file
+data_output_path = result_dir +'\\' +  data_output_file
 
 result_file = r'Result_Conribution_' + time_tool.formatted_string() + '.xlsx'
-result_path = result_dir + result_file
+result_path = result_dir + '\\' + result_file
 
 
 # 导入回归数据
