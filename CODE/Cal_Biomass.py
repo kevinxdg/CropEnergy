@@ -35,7 +35,7 @@ for index in para_agriOutput.index:
     para_WI = para_agriOutput.loc[index,'WI']
     tmp_biomass = data_agriOuput[index] * (1-para_WI) / para_HI
     biomass.concat(tmp_biomass, inplace=True)
--
+
 biomass.insert(biomass.col_count, 'TotalBiomass', biomass.sum(axis=1))
 print(biomass)
 
