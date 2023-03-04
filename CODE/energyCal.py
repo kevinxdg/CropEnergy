@@ -38,19 +38,20 @@ result = data * para_value
 result.columns = para_value.columns
 print(result)
 
+direct_energy = result.colsDataFrame([0,1,7])
+fertilizer_energy = DataFrameClass(result.colsDataFrame([3,4,5,6]).sum(axis=1),columns=['Fertilizer'])
+indirect_energy = fertilizer_energy.concat(result.colsDataFrame(list(range(8,18))),axis=1)
+total_energy = direct_energy.concat(indirect_energy,axis=1)
 
 exl = ExcelHelper()
-exl.copy_DataFrame(result,withtitles=True, withindex=True, indextitle='Year')
+exl.copy_DataFrame(total_energy,withtitles=True, withindex=True, indextitle='Year')
 exl.save_workbook(save_path)
 
-direct_energy = result.colsDataFrame([0,1,7]).sum(axis=1)
-indirect_energy = result.colsDataFrame(list(range(2,7))+list(range(8,18))).sum(axis=1)
-total_energy = direct_energy + indirect_energy
 
 energy_sum = DataFrameClass()
-energy_sum.concat(direct_energy, ignore_index=False,inplace=True)
-energy_sum.concat(indirect_energy, ignore_index=False,inplace=True)
-energy_sum.concat(total_energy, ignore_index=False,inplace=True)
+energy_sum.concat(direct_energy.sum(axis=1), ignore_index=False,inplace=True)
+energy_sum.concat(indirect_energy.sum(axis=1), ignore_index=False,inplace=True)
+energy_sum.concat(total_energy.sum(axis=1), ignore_index=False,inplace=True)
 energy_sum.columns = ['Direct','Indirect','Total']
 
 exl.add_sheet('EnergyUse')
