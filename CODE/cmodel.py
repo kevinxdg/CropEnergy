@@ -15,7 +15,7 @@ parent_dir = os.path.abspath(cur_dir + r'\..')
 
 data_dir = parent_dir + r'\Data\Renew2023'          #采用当前文件的相对路径来确定数据目录
 
-result_dir = r'D:\Workspace\Data\YZProject\Results'           # 保存结果的目录
+result_dir = r'D:\Workspace\Data\CropEnergy\Results'           # 保存结果的目录
 
 # 导入公共包
 from dataTools.dataObjects import *
