@@ -13,7 +13,7 @@ cur_dir = os.path.dirname(os.path.abspath(__file__))
 
 parent_dir = os.path.abspath(cur_dir + r'\..')
 
-data_dir = parent_dir + r'\Data\Renew2023'          #采用当前文件的相对路径来确定数据目录
+data_dir = r'D:\Workspace\Data\CropEnergy\DataSource'
 
 result_dir = r'D:\Workspace\Data\CropEnergy\Results'           # 保存结果的目录
 

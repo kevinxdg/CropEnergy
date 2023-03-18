@@ -11,7 +11,7 @@ from sklearn.decomposition import PCA
 
 
 # 准备数据文件
-data_input_file = r'AgriInputs2208.xlsx'
+data_input_file = r'AgriInputs2303.xlsx'
 data_output_file = r'Result_Biomass_2023_02_01_16_04_17.xlsx'
 
 data_input_path = data_dir + '\\' + data_input_file
