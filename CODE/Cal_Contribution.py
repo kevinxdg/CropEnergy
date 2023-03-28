@@ -95,7 +95,7 @@ for i in range(np.shape(ctb)[0]):
 
 result_coeffs = DataFrameClass(ctb.sum(axis=0))
 #result_coeffs = DataFrameClass(result_coeffs.T,columns = x.columns)
-result_coeffs = result_coeffs.T
+#result_coeffs = result_coeffs.T
 print('[原始变量系数]-----------------')
 print(result_coeffs, file=f)
 
